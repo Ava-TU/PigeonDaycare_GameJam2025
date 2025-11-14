@@ -1295,6 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142541357}
   - component: {fileID: 1142541358}
+  - component: {fileID: 1142541359}
   m_Layer: 5
   m_Name: HappyMeter
   m_TagString: Untagged
@@ -1374,6 +1375,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1142541359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142541356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c87daf274d91040add3908ff3de66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pigeon
+  slider: {fileID: 1142541358}
 --- !u!1001 &1796335861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,6 +1528,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c8a90fbdf9d2674abd0879d6961a915, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2095357034}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c8a90fbdf9d2674abd0879d6961a915, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095357035}
   m_SourcePrefab: {fileID: 100100000, guid: 7c8a90fbdf9d2674abd0879d6961a915, type: 3}
 --- !u!114 &2095357027
 MonoBehaviour:
@@ -1617,10 +1634,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c87daf274d91040add3908ff3de66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pigeon
-  happiness: 100
-  hygiene: 100
-  hunger: 100
-  max: 100
+  slider: {fileID: 0}
+--- !u!114 &2095357035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409584380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5230fbdd0fa67f419ab34e8441cfd49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pigeon
+  maxHappy: 100
+  currentHappy: 0
+  happyBar: {fileID: 1142541359}
 --- !u!1 &2120555427
 GameObject:
   m_ObjectHideFlags: 0
