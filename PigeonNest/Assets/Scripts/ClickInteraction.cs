@@ -5,19 +5,16 @@ public class ClickInteraction : MonoBehaviour
 {
     public UnityEvent clicked;
 
-    private Renderer _renderer;
+    public HappyBar happyBar;
+    public Pigeon pigeon;
 
-    private bool insideTrigger;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        _renderer = GetComponent<Renderer>();
-    }
+    public int happyGain;
 
     private void OnMouseDown()
     {
         Debug.Log("Clicked");
         clicked.Invoke();
+        pigeon.GainHappy(happyGain);
     }
+
 }

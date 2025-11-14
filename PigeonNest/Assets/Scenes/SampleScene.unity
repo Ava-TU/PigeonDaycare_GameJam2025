@@ -383,7 +383,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 52c6f3e7b1d714a4b9e554305656a60c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 922344620}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 52c6f3e7b1d714a4b9e554305656a60c, type: 3}
       insertIndex: -1
@@ -422,6 +425,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &266637644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 52c6f3e7b1d714a4b9e554305656a60c, type: 3}
+  m_PrefabInstance: {fileID: 266637641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &266637645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -455,6 +463,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c91603bf3b1a2743a5d7dee4d7d8ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickInteraction
+  clicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 266637643}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pigeon: {fileID: 2095357035}
+  happyGain: 10
 --- !u!1 &282355733
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +886,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453971356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -869,8 +894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 97.5, y: -97.5}
-  m_SizeDelta: {x: 195.005, y: 195.005}
+  m_AnchoredPosition: {x: 52.9201, y: -52.9201}
+  m_SizeDelta: {x: 105.8453, y: 105.8453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453971358
 MonoBehaviour:
@@ -1270,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1317,7 +1342,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1142541357}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 266637644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1350,7 +1375,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142541356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1360,8 +1385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -829, y: 411}
-  m_SizeDelta: {x: 195, y: 195}
+  m_AnchoredPosition: {x: -334.5814, y: 162.58144}
+  m_SizeDelta: {x: 105.8372, y: 105.8372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142541358
 MonoBehaviour:
@@ -1673,7 +1698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c87daf274d91040add3908ff3de66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pigeon
-  slider: {fileID: 0}
+  slider: {fileID: 1142541358}
 --- !u!114 &2095357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,5 +1873,4 @@ SceneRoots:
   - {fileID: 506115489}
   - {fileID: 1796335861}
   - {fileID: 266637641}
-  - {fileID: 922344620}
   - {fileID: 570822800}

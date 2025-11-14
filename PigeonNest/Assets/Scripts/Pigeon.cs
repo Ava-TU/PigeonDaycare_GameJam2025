@@ -19,11 +19,11 @@ public class Pigeon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(20);
+            TakeHappy(20);
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeHappy(int damage)
     {
         currentHappy -= damage;
 
@@ -34,4 +34,17 @@ public class Pigeon : MonoBehaviour
 
         happyBar.SetHappy(currentHappy);
     }
+    
+    public void GainHappy(int gain)
+    {
+        currentHappy += gain;
+
+        if (currentHappy > maxHappy)
+        {
+            currentHappy = maxHappy;
+        }
+
+        happyBar.SetHappy(currentHappy);
+    }
+
 }
