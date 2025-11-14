@@ -27,6 +27,11 @@ public class Pigeon : MonoBehaviour
     {
         currentHappy -= damage;
 
+        if (currentHappy < 0)
+        {
+            currentHappy = 0;
+        }
+
         happyBar.SetHappy(currentHappy);
     }
 }
