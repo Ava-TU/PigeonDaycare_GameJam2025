@@ -2,52 +2,52 @@ using UnityEngine;
 
 public class Pigeon : MonoBehaviour
 {
-    public float maxMeter = 100f;
-    public float currentMeter;
+    public float maxHappy = 100f;
+    public float currentHappy;
 
-    public MeterBar meterBar;
+    public HappyBar happyBar;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentMeter = maxMeter;
-        meterBar.SetMaxMeter(maxMeter);
+        currentHappy = maxHappy;
+        happyBar.SetMaxHappy(maxHappy);
     }
 
     // Update is called once per frame
     void Update()
     {
        //This will deplenish the meters overtime
-       currentMeter -= 6 * Time.deltaTime;
-        if (currentMeter < 0)
+       currentHappy -= 6 * Time.deltaTime;
+        if (currentHappy < 0)
         {
-            currentMeter = 0;
+            currentHappy = 0;
         }
-        meterBar.SetMeter(currentMeter);
+        happyBar.SetHappy(currentHappy);
     }
 
-    public void TakeMeter(float damage)
+    public void TakeHappy(float damage)
     {
-        currentMeter -= damage;
+        currentHappy -= damage;
 
-        if (currentMeter < 0)
+        if (currentHappy < 0)
         {
-            currentMeter = 0;
+            currentHappy = 0;
         }
 
-        meterBar.SetMeter(currentMeter);
+        happyBar.SetHappy(currentHappy);
     }
     
-    public void GainMeter(float gain)
+    public void GainHappy(float gain)
     {
-        currentMeter += gain;
+        currentHappy += gain;
 
-        if (currentMeter > maxMeter)
+        if (currentHappy > maxHappy)
         {
-            currentMeter = maxMeter;
+            currentHappy = maxHappy;
         }
 
-        meterBar.SetMeter(currentMeter);
+        happyBar.SetHappy(currentHappy);
     }
 
 }

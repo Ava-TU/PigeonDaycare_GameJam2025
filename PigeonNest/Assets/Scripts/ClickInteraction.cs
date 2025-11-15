@@ -5,16 +5,16 @@ public class ClickInteraction : MonoBehaviour
 {
     public UnityEvent clicked;
 
-    public MeterBar meterBar;
+    public HappyBar happyBar;
     public Pigeon pigeon;
 
-    public float meterGain;
+    public float happyGain;
 
     private void OnMouseDown()
     {
         Debug.Log("Clicked");
         clicked.Invoke();
-        pigeon.GainMeter(meterGain);
+        pigeon.GainHappy(happyGain);
     }
 
 }

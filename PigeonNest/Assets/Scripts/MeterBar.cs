@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MeterBar : MonoBehaviour
+public class HappyBar : MonoBehaviour
 {
 
     public Slider slider;
 
-    public void SetMaxMeter(float maxMeter)
+    public void SetMaxHappy(float maxHappy)
     {
-        slider.maxValue = maxMeter;
-        slider.value = maxMeter;
+        slider.maxValue = maxHappy;
+        slider.value = maxHappy;
     }
 
-    public void SetMeter(float meter)
+    public void SetHappy(float happy)
     {
-        slider.value = meter;
+        slider.value = happy;
     }
 }
