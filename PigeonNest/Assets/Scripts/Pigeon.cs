@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Pigeon : MonoBehaviour
 {
-    public int maxHappy = 100;
-    public int currentHappy;
+    public float maxHappy = 100f;
+    public float currentHappy;
 
     public HappyBar happyBar;
 
@@ -17,13 +17,16 @@ public class Pigeon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+       //This will deplenish the meters overtime
+       currentHappy -= 6 * Time.deltaTime;
+        if (currentHappy < 0)
         {
-            TakeHappy(20);
+            currentHappy = 0;
         }
+        happyBar.SetHappy(currentHappy);
     }
 
-    public void TakeHappy(int damage)
+    public void TakeHappy(float damage)
     {
         currentHappy -= damage;
 
@@ -35,7 +38,7 @@ public class Pigeon : MonoBehaviour
         happyBar.SetHappy(currentHappy);
     }
     
-    public void GainHappy(int gain)
+    public void GainHappy(float gain)
     {
         currentHappy += gain;
 

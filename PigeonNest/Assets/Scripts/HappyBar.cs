@@ -6,13 +6,13 @@ public class HappyBar : MonoBehaviour
 
     public Slider slider;
 
-    public void SetMaxHappy(int maxHappy)
+    public void SetMaxHappy(float maxHappy)
     {
         slider.maxValue = maxHappy;
         slider.value = maxHappy;
     }
 
-    public void SetHappy(int happy)
+    public void SetHappy(float happy)
     {
         slider.value = happy;
     }

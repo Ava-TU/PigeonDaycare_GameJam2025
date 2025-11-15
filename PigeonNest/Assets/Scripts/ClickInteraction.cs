@@ -8,7 +8,7 @@ public class ClickInteraction : MonoBehaviour
     public HappyBar happyBar;
     public Pigeon pigeon;
 
-    public int happyGain;
+    public float happyGain;
 
     private void OnMouseDown()
     {
