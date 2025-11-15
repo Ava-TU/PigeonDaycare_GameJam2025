@@ -6,6 +6,8 @@ public class Pigeon : MonoBehaviour
     public float currentHappy;
 
     public HappyBar happyBar;
+    public CleanBar cleanBar;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
