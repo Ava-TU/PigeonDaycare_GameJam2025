@@ -470,9 +470,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  happyBar: {fileID: 0}
+  meterBar: {fileID: 1142541359}
   pigeon: {fileID: 2095357035}
-  happyGain: 10
+  meterGain: 10
 --- !u!1 &282355733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14c87daf274d91040add3908ff3de66f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pigeon
+  m_EditorClassIdentifier: Assembly-CSharp::MeterBar
   slider: {fileID: 1142541358}
 --- !u!1001 &1364421505
 PrefabInstance:
@@ -1918,9 +1918,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5230fbdd0fa67f419ab34e8441cfd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pigeon
-  maxHappy: 100
-  currentHappy: 0
-  happyBar: {fileID: 1142541359}
+  maxMeter: 100
+  currentMeter: 0
+  meterBar: {fileID: 1142541359}
 --- !u!1 &2120555427
 GameObject:
   m_ObjectHideFlags: 0
