@@ -15,6 +15,8 @@ public class Pigeon : MonoBehaviour
     public CleanBar cleanBar;
     public FeedBar feedBar;
 
+    public ChangeSceneScript changeScene;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,12 +34,12 @@ public class Pigeon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //This will deplenish the meters overtime
-       currentHappy -= 6 * Time.deltaTime;
-       if (currentHappy < 0)
-       {
+        //This will deplenish the meters overtime
+        currentHappy -= 6 * Time.deltaTime;
+        if (currentHappy < 0)
+        {
             currentHappy = 0;
-       }
+        }
         happyBar.SetHappy(currentHappy);
 
         currentFeed -= 6 * Time.deltaTime;
@@ -53,6 +55,11 @@ public class Pigeon : MonoBehaviour
             currentClean = 0;
         }
         cleanBar.SetClean(currentClean);
+
+        if (currentHappy <= 0 || currentClean <= 0 || currentFeed <= 0)
+        {
+            changeScene.ChangeScene();
+        }
     }
 
     public void TakeHappy(float damage)
